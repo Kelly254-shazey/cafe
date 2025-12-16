@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
@@ -17,6 +17,7 @@ body {
 }
 
 h1, h2, h3 {
+    font-family: 'Merriweather', serif;
     margin-bottom: 20px;
 }
 
@@ -119,6 +120,22 @@ nav ul li a:hover {
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
+
+/* Specific background images (moved from inline styles) */
+#hero-slider-home .slide {
+    background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=600&fit=crop');
+}
+
+#feature-coffee {
+    background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=300&h=200&fit=crop');
+}
+#feature-food {
+    background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop');
+}
+#feature-cozy {
+    background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=300&h=200&fit=crop');
+}
+
 
 /* ensure page content clears fixed header */
 body {
@@ -240,6 +257,7 @@ button:hover {
 .quick-btn {
     background: #8B4513;
     color: white;
+    transition: background-color 0.3s, transform 0.2s;
     padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
@@ -247,7 +265,10 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 .quick-btn:hover { background: #a15b2b; }
-
+.quick-btn:active {
+    transform: scale(0.98);
+}
+ 
 /* Footer and newsletter */
 footer {
     background-color: #8B4513;
@@ -274,6 +295,15 @@ footer {
 .footer-newsletter { display:flex; gap:8px; align-items:center; }
 .footer-newsletter input { padding:8px 10px; border-radius:6px; border: none; }
 .footer-newsletter button { padding:8px 12px; border-radius:6px; border:none; background:#fff; color:#8B4513; font-weight:700 }
+.footer-newsletter #newsletterMessage {
+    margin-left: 8px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.copyright {
+    margin-top: 12px;
+}
 
 @media (max-width: 900px) {
     .mission-grid { flex-direction:column; }
@@ -1030,7 +1060,7 @@ footer {
     display: flex;
     gap: 14px;
     align-items: center;
-    animation: gallery-scroll 28s linear infinite;
+    animation: gallery-scroll 14s linear infinite;
 }
 .gallery-item { flex: 0 0 auto; width: 320px; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
 .gallery-item img { width: 100%; height: 200px; object-fit: cover; display:block; }
@@ -1038,7 +1068,7 @@ footer {
 
 @keyframes gallery-scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-40%); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Hover effects */
