@@ -25,13 +25,11 @@
     <header>
         <nav>
             <div class="logo">Café Delight</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="specials.html">Special Offers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="booking.html">Book</a></li>
             </ul>
         </nav>
@@ -54,7 +52,7 @@
 
             <div class="booking-container">
                 <h2>Book a Table</h2>
-                <form id="bookingForm">
+                <form id="bookingForm" class="booking-card">
                     <div class="form-row">
                             <label for="name">Full name</label>
                             <input type="text" id="name" name="name" required>
@@ -139,8 +137,22 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Café Delight. All rights reserved.</p>
-        <p>Designed by Café Delight Web Team @kelly123simiyu</p>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="booking.html">Book</a>
+            </div>
+            <div class="footer-newsletter">
+                <form id="newsletterForm">
+                    <input id="newsletterEmail" type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterMessage" style="margin-left:8px;color:#fff;font-weight:600"></div>
+            </div>
+        </div>
+        <p style="margin-top:12px">&copy; 2025 Café Delight. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>

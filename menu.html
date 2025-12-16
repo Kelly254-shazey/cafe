@@ -10,19 +10,22 @@
     <header>
         <nav>
             <div class="logo">Café Delight</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="specials.html">Special Offers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html">Book</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="menu">
         <h2>Our Menu</h2>
+        <div class="menu-actions">
+            <a class="btn" href="specials.html">See Specials</a>
+            <a class="btn" href="booking.html">Book Now</a>
+        </div>
         <div class="menu-category">
             <h3>Coffees</h3>
             <div class="menu-cards">
@@ -148,10 +151,25 @@
         </div>
     </section>
 
+    <!-- Specials and booking removed from this page; use dedicated pages -->
+
     <footer>
-        <p>&copy; 2025 Café Delight. All rights reserved.</p>
-        <p>Designed by Café Delight Web Team @kelly123simiyu</p>
-        <p>kellyflo technologies</p>
+            <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="booking.html">Book</a>
+            </div>
+            <div class="footer-newsletter">
+                <form id="newsletterForm">
+                    <input id="newsletterEmail" type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterMessage" style="margin-left:8px;color:#fff;font-weight:600"></div>
+            </div>
+        </div>
+        <p style="margin-top:12px">&copy; 2025 Café Delight. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>

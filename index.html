@@ -10,13 +10,12 @@
     <header>
         <nav>
             <div class="logo">Café Delight</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="specials.html">Special Offers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html">Book</a></li>
             </ul>
         </nav>
     </header>
@@ -25,95 +24,36 @@
         <div class="hero-slider">
             <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=600&fit=crop');">
                 <div class="hero-content">
-                    <section id="hours">
-                        <div class="hours-bar">
-                            <div class="marquee" aria-hidden="false">
-                                <ul class="hours-list">
-                                    <li>Mon: 7:00 AM — 6:00 PM</li>
-                                    <li>Tue: 7:00 AM — 6:00 PM</li>
-                                    <li>Wed: 7:00 AM — 6:00 PM</li>
-                                    <li>Thu: 7:00 AM — 8:00 PM</li>
-                                    <li>Fri: 7:00 AM — 9:00 PM</li>
-                                    <li>Sat: 8:00 AM — 9:00 PM</li>
-                                    <li>Sun: 8:00 AM — 4:00 PM</li>
-                                    <li class="spacer">•</li>
-                                    <li>Mon: 7:00 AM — 6:00 PM</li>
-                                    <li>Tue: 7:00 AM — 6:00 PM</li>
-                                    <li>Wed: 7:00 AM — 6:00 PM</li>
-                                    <li>Thu: 7:00 AM — 8:00 PM</li>
-                                    <li>Fri: 7:00 AM — 9:00 PM</li>
-                                    <li>Sat: 8:00 AM — 9:00 PM</li>
-                                    <li>Sun: 8:00 AM — 4:00 PM</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="more-features">
-                        <h2>Why Choose Café Delight</h2>
-                        <div class="feature-grid">
-                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop');">
-                                <div class="card-content">
-                                    <h3>Free Wi‑Fi</h3>
-                                    <p>Fast, reliable connection for work or play.</p>
-                                </div>
-                            </div>
-                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop');">
-                                <div class="card-content">
-                                    <h3>Outdoor Seating</h3>
-                                    <p>Relax in our sunny patio with fresh air.</p>
-                                </div>
-                            </div>
-                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop');">
-                                <div class="card-content">
-                                    <h3>Delivery & Takeout</h3>
-                                    <p>Order ahead and pick up or have it delivered.</p>
-                                </div>
-                            </div>
-                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1529338296731-8d04d4d3d2f6?w=600&h=400&fit=crop');">
-                                <div class="card-content">
-                                    <h3>Pet Friendly</h3>
-                                    <p>Bring your furry friends to our outdoor area.</p>
-                                </div>
-                            </div>
-                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&h=400&fit=crop');">
-                                <div class="card-content">
-                                    <h3>Live Music</h3>
-                                    <p>Weekly performances by local artists.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <!-- hero content kept minimal so banner stays clean -->
+                    <h1>Welcome to Café Delight</h1>
+                    <p>Handcrafted coffee and delightful dishes — made with care.</p>
                 </div>
 
-                <div class="form-row">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-row">
-                    <label for="time">Time</label>
-                    <input type="time" id="time" name="time" required>
-                </div>
-                <div class="form-row">
-                    <label for="guests">Guests</label>
-                    <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
-                </div>
-                <div class="form-row">
-                    <label for="notes">Notes (optional)</label>
-                    <textarea id="notes" name="notes" rows="2"></textarea>
-                </div>
+        
+    </section>
 
-                <div class="form-row">
-                    <label>Price</label>
-                    <div id="priceDisplay" class="card-caption">$0.00</div>
-                    <input type="hidden" id="price" name="price" value="0">
-                </div>
+    <!-- Opening hours moved below the banner -->
+    <section id="hours">
+        <div class="hours-bar">
+            <div class="marquee" aria-hidden="false">
+                <ul class="hours-list">
+                    <li>Mon: 7:00 AM — 6:00 PM</li>
+                    <li>Tue: 7:00 AM — 6:00 PM</li>
+                    <li>Wed: 7:00 AM — 6:00 PM</li>
+                    <li>Thu: 7:00 AM — 8:00 PM</li>
+                    <li>Fri: 7:00 AM — 9:00 PM</li>
+                    <li>Sat: 8:00 AM — 9:00 PM</li>
+                    <li>Sun: 8:00 AM — 4:00 PM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <div class="form-row">
-                    <button type="submit" class="btn">Submit Booking</button>
-                </div>
-                <div id="bookingMessage" class="booking-message" aria-live="polite"></div>
-            </form>
+    <section class="quick-actions" aria-label="Quick actions">
+        <div class="quick-actions-inner">
+            <a class="quick-btn" href="booking.html">Book a Table</a>
+            <a class="quick-btn" href="menu.html">View Menu</a>
+            <a class="quick-btn" href="specials.html">See Specials</a>
         </div>
     </section>
 
@@ -138,12 +78,46 @@
         </div>
     </section>
 
+    <!-- Home Gallery (auto-scrolling strip) -->
+    <section id="home-gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-viewport">
+            <div class="gallery-track">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559054663-8e03873cc4ce?w=800&h=600&fit=crop" alt="Cozy Interior"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&h=600&fit=crop" alt="Freshly Brewed"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop" alt="Delicious Pastries"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop" alt="Warm Atmosphere"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop" alt="Artisanal Beans"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop" alt="Fresh Bites"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521305916504-4a1121188589?w=800&h=600&fit=crop" alt="Chef Preparing Dish"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop" alt="Barista Art"></div>
+                <!-- duplicate set for smooth continuous scroll -->
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559054663-8e03873cc4ce?w=800&h=600&fit=crop" alt="Cozy Interior"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&h=600&fit=crop" alt="Freshly Brewed"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop" alt="Delicious Pastries"></div>
+            </div>
+        </div>
+    </section>
+
 
 
     <footer>
-        <p>&copy; 2025 Café Delight. All rights reserved.</p>
-        <p>Designed by Café Delight Web Team @kelly123simiyu</p>
-        <p>kellyflo technologies</p>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="booking.html">Book</a>
+            </div>
+            <div class="footer-newsletter">
+                <form id="newsletterForm">
+                    <input id="newsletterEmail" type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterMessage" style="margin-left:8px;color:#fff;font-weight:600"></div>
+            </div>
+        </div>
+        <p style="margin-top:12px">&copy; 2025 Café Delight. All rights reserved. Designed by Café Delight Web Team</p>
     </footer>
 
     <script src="js/script.js"></script>

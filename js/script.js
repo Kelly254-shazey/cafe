@@ -22,6 +22,40 @@ function showImage(index) {
     });
 }
 
+// Ensure every card has an image (inject placeholder where missing)
+(function ensureCardImages(){
+    const placeholder = 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&auto=format&fm=jpg&q=60';
+
+    // For elements that should contain an <img>
+    const cardSelectors = ['.menu-card', '.special-card', '.image-card', '.gallery-item', '.team-member'];
+    cardSelectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(card => {
+            // If card already has an <img> with a non-empty src, skip
+            const img = card.querySelector('img');
+            if (img) {
+                if (!img.getAttribute('src')) img.src = placeholder;
+                return;
+            }
+            // If no <img>, but this is a gallery-item or image-card, create one
+            if (sel === '.gallery-item' || sel === '.image-card' || sel === '.team-member') {
+                const newImg = document.createElement('img');
+                newImg.src = placeholder;
+                newImg.alt = 'Placeholder image';
+                // insert at top
+                card.insertBefore(newImg, card.firstChild);
+            }
+        });
+    });
+
+    // For feature-card ensure background-image exists; if not, add placeholder
+    document.querySelectorAll('.feature-card').forEach(fc => {
+        const bg = fc.style.backgroundImage || window.getComputedStyle(fc).backgroundImage;
+        if (!bg || bg === 'none' || bg === 'initial') {
+            fc.style.backgroundImage = `url('${placeholder}')`;
+        }
+    });
+})();
+
 function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     showImage(currentImageIndex);
@@ -135,6 +169,38 @@ function scrollToMenu() {
     if (menuSection) {
         menuSection.scrollIntoView({ behavior: 'smooth' });
     }
+}
+
+// Navigation toggle for mobile
+const navToggles = document.querySelectorAll('.nav-toggle');
+navToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const nav = btn.closest('nav');
+        if (!nav) return;
+        const ul = nav.querySelector('ul');
+        if (!ul) return;
+        ul.classList.toggle('show');
+    });
+});
+
+// Newsletter subscription handler (footer)
+const newsletterForm = document.getElementById('newsletterForm');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail').value.trim();
+        const msg = document.getElementById('newsletterMessage');
+        if (!email || !/\S+@\S+\.\S+/.test(email)) {
+            if (msg) msg.textContent = 'Please enter a valid email.';
+            return;
+        }
+        let list = [];
+        try { list = JSON.parse(localStorage.getItem('newsletter') || '[]'); } catch(e) { list = []; }
+        if (!list.includes(email)) list.push(email);
+        localStorage.setItem('newsletter', JSON.stringify(list));
+        if (msg) msg.textContent = 'Thanks — you are subscribed!';
+        newsletterForm.reset();
+    });
 }
 
 // Booking form handling (works on `index.html` booking section and standalone `booking.html`)
@@ -291,7 +357,8 @@ if (bookingForm) {
         reservations.slice().reverse().forEach(r => {
             const el = document.createElement('div');
             el.className = 'reservation-item';
-            el.innerHTML = `<strong>${r.name}</strong> — <em>${r.bookingNumber}</em><br>${r.date} @ ${r.time} — ${r.quantity} x ${r.product} — $${parseFloat(r.price).toFixed(2)}<br><small>${r.email}${r.phone? ' • ' + r.phone : ''} • ${r.seating}</small>`;
+            const thumb = (typeof productImageMap !== 'undefined' && productImageMap[r.product]) ? productImageMap[r.product] : (typeof productImageMap !== 'undefined' ? productImageMap['coffee'] : '');
+            el.innerHTML = `${thumb ? `<img src="${thumb}" alt="${r.product}">` : ''}<div class="reservation-meta"><strong>${r.name}</strong> — <em>${r.bookingNumber}</em><br>${r.date} @ ${r.time} — ${r.quantity} x ${r.product} — $${parseFloat(r.price).toFixed(2)}<br><small>${r.email}${r.phone? ' • ' + r.phone : ''} • ${r.seating}</small></div>`;
             container.appendChild(el);
         });
     }
