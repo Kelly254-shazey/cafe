@@ -1,16 +1,11 @@
-# TODO List for Café/Restaurant Website
+# Mobile Responsiveness Improvements
 
 ## Tasks to Complete
-- [x] Create index.html (Homepage: Welcome message, images, navigation)
-- [x] Create menu.html (Menu: List of foods/drinks with images and prices)
-- [x] Create contact.html (Contact: Form and embedded map)
-- [x] Create about.html (About Us: Story and team)
-- [x] Create gallery.html (Gallery: Photo carousel)
-- [x] Create specials.html (Special Offers: Promotions)
-- [x] Create css/style.css (Responsive layout, modern styling, animations, hover effects)
-- [x] Create js/script.js (Image carousel for gallery, contact form validation, smooth scrolling)
-- [x] Add special offers and gallery sections to homepage
-- [x] Modify features section to use cards with background images
-- [x] Test the website by opening index.html in a browser
-- [x] Verify responsiveness on different screen sizes
-- [x] Ensure all links and interactivity work
+- [ ] Add media query for 600px breakpoint to adjust grid layouts, font sizes, and paddings
+- [ ] Add media query for 480px breakpoint for extra small screens
+- [ ] Adjust grid-template-columns for .feature-grid, .menu-cards, .special-cards, .team-members to single column on small screens
+- [ ] Reduce font sizes for h1, h2, h3, and body text on mobile
+- [ ] Adjust paddings and margins for sections and cards on mobile
+- [ ] Ensure flexbox layouts stack properly on small screens
+- [ ] Fine-tune hero content and navigation for better mobile experience
+- [ ] Test and verify all pages are responsive

@@ -606,6 +606,220 @@ footer {
     }
 }
 
+/* Additional mobile responsiveness for smaller screens */
+@media (max-width: 600px) {
+    /* Adjust hero content */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    /* Adjust grid layouts to single column */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .special-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce font sizes */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Adjust paddings and margins */
+    section {
+        padding: 30px 15px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .menu-card, .special-card, .image-card {
+        margin-bottom: 15px;
+    }
+
+    /* Adjust navigation */
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust footer */
+    .footer-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust quick actions */
+    .quick-actions-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quick-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust contact and booking forms */
+    .contact-grid, .booking-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Adjust gallery */
+    .gallery-track {
+        gap: 10px;
+    }
+
+    .gallery-item {
+        width: 280px;
+    }
+
+    /* Adjust hours marquee */
+    .hours-list {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small screens (480px and below) */
+@media (max-width: 480px) {
+    /* Further reduce font sizes */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Reduce paddings further */
+    section {
+        padding: 20px 10px;
+    }
+
+    .card-content {
+        padding: 12px;
+    }
+
+    /* Adjust logo and nav */
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust footer */
+    footer {
+        padding: 15px 10px;
+    }
+
+    .footer-newsletter input {
+        width: 150px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust quick buttons */
+    .quick-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust gallery items */
+    .gallery-item {
+        width: 250px;
+    }
+
+    /* Adjust team cards */
+    .team-media img {
+        height: 180px;
+    }
+
+    /* Adjust specials */
+    .special-item {
+        padding: 15px;
+    }
+
+    .special-item img {
+        width: 120px;
+        height: 80px;
+    }
+
+    /* Adjust menu cards */
+    .menu-card img {
+        height: 150px;
+    }
+
+    /* Adjust booking form */
+    .booking-card {
+        padding: 15px;
+    }
+
+    /* Adjust contact forms */
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust hours bar */
+    .hours-bar {
+        padding: 10px 12px;
+    }
+
+    .hours-list {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+}
+
 /* Gallery section */
 #gallery {
     padding: 50px 20px;
@@ -869,5 +1083,4 @@ footer {
 /* Hover effects */
 .menu-item:hover, .special-item:hover {
     transform: translateY(-5px);
-    transition: transform 0.3s;
 }
