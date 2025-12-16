@@ -9,6 +9,8 @@
 - [x] Create specials.html (Special Offers: Promotions)
 - [x] Create css/style.css (Responsive layout, modern styling, animations, hover effects)
 - [x] Create js/script.js (Image carousel for gallery, contact form validation, smooth scrolling)
+- [x] Add special offers and gallery sections to homepage
+- [x] Modify features section to use cards with background images
 - [x] Test the website by opening index.html in a browser
 - [x] Verify responsiveness on different screen sizes
 - [x] Ensure all links and interactivity work
