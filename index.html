@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Delight - Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Café Delight</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="specials.html">Special Offers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=600&fit=crop');">
+                <div class="hero-content">
+                    <h1>Welcome to Café Delight</h1>
+                    <p>Experience the finest coffee and cuisine in a cozy atmosphere.</p>
+                    <button onclick="scrollToMenu()">View Menu</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1559054663-8e03873cc4ce?w=1200&h=600&fit=crop');">
+                <div class="hero-content">
+                    <h1>Premium Coffee Selection</h1>
+                    <p>Indulge in our expertly crafted beverages made from the finest beans.</p>
+                    <button onclick="scrollToMenu()">Explore Drinks</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=600&fit=crop');">
+                <div class="hero-content">
+                    <h1>Delicious Cuisine</h1>
+                    <p>Savor our mouth-watering dishes prepared with fresh, local ingredients.</p>
+                    <button onclick="scrollToMenu()">See Our Menu</button>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="feature">
+            <img src="https://via.placeholder.com/300x200?text=Fresh+Coffee" alt="Fresh Coffee">
+            <h3>Fresh Coffee</h3>
+            <p>Enjoy our freshly brewed coffee made from premium beans.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/300x200?text=Delicious+Food" alt="Delicious Food">
+            <h3>Delicious Food</h3>
+            <p>Savor our mouth-watering dishes prepared with love.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/300x200?text=Cozy+Atmosphere" alt="Cozy Atmosphere">
+            <h3>Cozy Atmosphere</h3>
+            <p>Relax in our inviting space perfect for any occasion.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Café Delight. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
