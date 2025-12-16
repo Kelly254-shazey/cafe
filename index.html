@@ -25,30 +25,95 @@
         <div class="hero-slider">
             <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=600&fit=crop');">
                 <div class="hero-content">
-                    <h1>Welcome to Café Delight</h1>
-                    <p>Experience the finest coffee and cuisine in a cozy atmosphere.</p>
-                    <button onclick="scrollToMenu()">View Menu</button>
+                    <section id="hours">
+                        <div class="hours-bar">
+                            <div class="marquee" aria-hidden="false">
+                                <ul class="hours-list">
+                                    <li>Mon: 7:00 AM — 6:00 PM</li>
+                                    <li>Tue: 7:00 AM — 6:00 PM</li>
+                                    <li>Wed: 7:00 AM — 6:00 PM</li>
+                                    <li>Thu: 7:00 AM — 8:00 PM</li>
+                                    <li>Fri: 7:00 AM — 9:00 PM</li>
+                                    <li>Sat: 8:00 AM — 9:00 PM</li>
+                                    <li>Sun: 8:00 AM — 4:00 PM</li>
+                                    <li class="spacer">•</li>
+                                    <li>Mon: 7:00 AM — 6:00 PM</li>
+                                    <li>Tue: 7:00 AM — 6:00 PM</li>
+                                    <li>Wed: 7:00 AM — 6:00 PM</li>
+                                    <li>Thu: 7:00 AM — 8:00 PM</li>
+                                    <li>Fri: 7:00 AM — 9:00 PM</li>
+                                    <li>Sat: 8:00 AM — 9:00 PM</li>
+                                    <li>Sun: 8:00 AM — 4:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="more-features">
+                        <h2>Why Choose Café Delight</h2>
+                        <div class="feature-grid">
+                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop');">
+                                <div class="card-content">
+                                    <h3>Free Wi‑Fi</h3>
+                                    <p>Fast, reliable connection for work or play.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop');">
+                                <div class="card-content">
+                                    <h3>Outdoor Seating</h3>
+                                    <p>Relax in our sunny patio with fresh air.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop');">
+                                <div class="card-content">
+                                    <h3>Delivery & Takeout</h3>
+                                    <p>Order ahead and pick up or have it delivered.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1529338296731-8d04d4d3d2f6?w=600&h=400&fit=crop');">
+                                <div class="card-content">
+                                    <h3>Pet Friendly</h3>
+                                    <p>Bring your furry friends to our outdoor area.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&h=400&fit=crop');">
+                                <div class="card-content">
+                                    <h3>Live Music</h3>
+                                    <p>Weekly performances by local artists.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1559054663-8e03873cc4ce?w=1200&h=600&fit=crop');">
-                <div class="hero-content">
-                    <h1>Premium Coffee Selection</h1>
-                    <p>Indulge in our expertly crafted beverages made from the finest beans.</p>
-                    <button onclick="scrollToMenu()">Explore Drinks</button>
+
+                <div class="form-row">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
                 </div>
-            </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=600&fit=crop');">
-                <div class="hero-content">
-                    <h1>Delicious Cuisine</h1>
-                    <p>Savor our mouth-watering dishes prepared with fresh, local ingredients.</p>
-                    <button onclick="scrollToMenu()">See Our Menu</button>
+                <div class="form-row">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" required>
                 </div>
-            </div>
-        </div>
-        <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
+                <div class="form-row">
+                    <label for="guests">Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+                </div>
+                <div class="form-row">
+                    <label for="notes">Notes (optional)</label>
+                    <textarea id="notes" name="notes" rows="2"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label>Price</label>
+                    <div id="priceDisplay" class="card-caption">$0.00</div>
+                    <input type="hidden" id="price" name="price" value="0">
+                </div>
+
+                <div class="form-row">
+                    <button type="submit" class="btn">Submit Booking</button>
+                </div>
+                <div id="bookingMessage" class="booking-message" aria-live="polite"></div>
+            </form>
         </div>
     </section>
 

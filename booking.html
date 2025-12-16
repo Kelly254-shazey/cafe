@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Delight - Book a Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Small tweaks specific to booking page */
+        .reservations-list {
+            margin-top: 12px;
+            display: grid;
+            gap: 8px;
+        }
+        .reservation-item {
+            background:#fff;
+            padding:10px;
+            border-radius:6px;
+            box-shadow:0 4px 8px rgba(0,0,0,0.04);
+            font-size:0.95rem;
+        }
+    </style>
+</head>
+<body class="plain-bg">
+    <header>
+        <nav>
+            <div class="logo">Café Delight</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="specials.html">Special Offers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hours-and-booking">
+            <div class="hours-container">
+                <h2>Opening Hours</h2>
+                <ul class="hours-list">
+                    <li>Monday: 7:00 AM — 9:00 PM</li>
+                    <li>Tuesday: 7:00 AM — 9:00 PM</li>
+                    <li>Wednesday: 7:00 AM — 9:00 PM</li>
+                    <li>Thursday: 7:00 AM — 9:00 PM</li>
+                    <li>Friday: 7:00 AM — 10:00 PM</li>
+                    <li>Saturday: 8:00 AM — 4:00 AM</li>
+                    <li>Sunday: 8:00 AM — 4:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="booking-container">
+                <h2>Book a Table</h2>
+                <form id="bookingForm">
+                    <div class="form-row">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="product">Product / Category</label>
+                            <select id="product" name="product">
+                                <option value="coffee">Coffee — $3.50</option>
+                                <option value="pastry">Pastry — $4.00</option>
+                                <option value="brunch">Brunch — $15.00</option>
+                                <option value="salad">Salad — $8.50</option>
+                                <option value="dinner">Dinner — $18.00</option>
+                                <option value="latte">Latte — $4.50</option>
+                                <option value="cappuccino">Cappuccino — $4.00</option>
+                                <option value="iced_latte">Iced Latte — $4.75</option>
+                                <option value="smoothie">Smoothie — $5.50</option>
+                                <option value="sandwich">Gourmet Sandwich — $9.50</option>
+                                <option value="cake">Slice of Cake — $5.00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Preview</label>
+                            <img id="productPreview" class="product-preview" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=600&h=400&fit=crop" alt="Product preview">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="seating">Booking: Table or Room</label>
+                            <select id="seating" name="seating">
+                                <option value="table">Table</option>
+                                <option value="room">Private Room</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="time">Time</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="guests">Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="notes">Notes (optional)</label>
+                            <textarea id="notes" name="notes" rows="2"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <label>Price</label>
+                            <div id="priceDisplay" class="card-caption">$0.00</div>
+                            <input type="hidden" id="price" name="price" value="0">
+                        </div>
+
+                        <div class="form-row">
+                            <button type="submit" class="btn">Submit Booking</button>
+                        </div>
+                        <div id="bookingMessage" class="booking-message" aria-live="polite"></div>
+                </form>
+
+                <h3>Your reservations</h3>
+                <div id="reservationsList" class="reservations-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Café Delight. All rights reserved.</p>
+        <p>Designed by Café Delight Web Team @kelly123simiyu</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
